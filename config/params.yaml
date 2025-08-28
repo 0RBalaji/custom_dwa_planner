@@ -1,0 +1,32 @@
+dwa_planner:
+  ros__parameters:
+    # Robot velocity limits
+    max_linear_vel: 0.22        # m/s - TurtleBot3 max linear velocity
+    min_linear_vel: -0.22       # m/s - Reverse velocity
+    max_angular_vel: 2.84       # rad/s - TurtleBot3 max angular velocity
+    min_angular_vel: -2.84      # rad/s
+    
+    # Robot acceleration limits
+    max_linear_accel: 2.5       # m/s^2
+    max_angular_accel: 3.2      # rad/s^2
+    
+    # DWA parameters
+    velocity_samples: 20        # Number of velocity samples per dimension
+    prediction_time: 3.0        # Trajectory prediction horizon (seconds)
+    dt: 0.1                     # Time step for trajectory prediction
+    
+    # Cost function weights
+    goal_weight: 1.0           # Weight for distance to goal
+    obstacle_weight: 2.0       # Weight for obstacle avoidance
+    
+    # Navigation parameters
+    goal_tolerance: 0.2        # Distance tolerance to goal (meters)
+    obstacle_threshold: 0.5    # Minimum safe distance to obstacles (meters)
+    robot_radius: 0.105        # TurtleBot3 radius (meters)
+    
+    # Control frequency
+    control_frequency: 10.0    # Hz
+    
+    # Visualization
+    publish_trajectories: true
+    max_trajectories_to_show: 10
