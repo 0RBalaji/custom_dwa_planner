@@ -50,7 +50,7 @@ void DWAPlanner::loadParameters()
 
   this->declare_parameter("robot_radius", 0.165);
   this->declare_parameter("control_frequency", 10.0);
-  this->declare_parameter("max_trajectories_to_show", 15);
+  this->declare_parameter("max_trajectories_to_show", 10);
   
   max_linear_vel_ = this->get_parameter("max_linear_vel").as_double();
   min_linear_vel_ = this->get_parameter("min_linear_vel").as_double();
