@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.sdf": "xml",
-        "memory": "cpp",
-        "istream": "cpp",
-        "functional": "cpp"
-    }
-}
