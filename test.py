@@ -20,8 +20,8 @@ class DWATestNode(Node):
         goal.pose.position.z = 0.0
         
         # Convert theta to quaternion
-        goal.pose.orientation.x = 0.0
-        goal.pose.orientation.y = 0.0
+        # goal.pose.orientation.x = 0.0
+        # goal.pose.orientation.y = 0.0
         goal.pose.orientation.z = theta
         goal.pose.orientation.w = 1.0
         
