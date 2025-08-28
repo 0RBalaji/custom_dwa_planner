@@ -93,7 +93,22 @@ private:
   std::vector<Velocity> sampleVelocities();
   Trajectory predictTrajectory(const Velocity& vel, const Pose& start_pose);
   double calculateCost(const Trajectory& trajectory);
+  double goalCost(const Trajectory& trajectory);
+  double obstacleCost(const Trajectory& trajectory);
+  double velocityCost(const Velocity& vel);
+  double smoothnessCost(const Velocity& vel);
+  bool isTrajectoryValid(const Trajectory& trajectory);
   double getMinObstacleDistance(const Pose& pose);
+
+  // Utility functions
+  void loadParameters();
+  void publishTrajectories(const std::vector<Trajectory>& trajectories);
+  double normalizeAngle(double angle);
+  double euclideanDistance(const Pose& p1, const Pose& p2);
+  bool isGoalReached();
+  
+  // Debugging
+  void logDebugInfo(const Velocity& best_vel, double best_cost);
 };
 
-#endif  // CUSTOM_DWA_PLANNER__DWA_PLANNER_HPP_
+#endif  // CUSTOM_DWA_PLANNER_HPP_
